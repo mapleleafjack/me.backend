@@ -74,7 +74,7 @@ jobs:
         env:
           DB_HOST: localhost
           DB_PORT: 5432
-          DB_NAME: backend_test
+          DB_NAME: backend
           DB_USER: jack
           DB_PASSWORD: password
         run: |
