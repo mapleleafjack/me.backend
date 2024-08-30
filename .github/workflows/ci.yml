@@ -14,7 +14,7 @@ jobs:
 
     services:
       postgres:
-        image: postgres:16
+        image: postgres:13
         env:
           POSTGRES_USER: jack
           POSTGRES_PASSWORD: password
@@ -59,7 +59,7 @@ jobs:
 
       - name: Create test database
         run: |
-          psql -h localhost -U jack -d backend -c "CREATE DATABASE backend_test;"
+          PGPASSWORD=password psql -h localhost -U jack -d backend -c "CREATE DATABASE backend_test;"
 
       - name: Run Alembic migrations
         env:
