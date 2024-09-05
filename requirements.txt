@@ -5,3 +5,5 @@ python-dotenv
 alembic
 pytest
 coverage
+pytest-mock
+Flask-SQLAlchemy

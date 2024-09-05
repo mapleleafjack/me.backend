@@ -1,7 +1,7 @@
 from db.models import Project
 
 
-def test_create_project(session):
+def test_project(session):
     """Test creating a new project."""
     # Add a new project
     new_project = Project(description='Test project')
@@ -13,3 +13,12 @@ def test_create_project(session):
 
     assert project is not None
     assert project.description == 'Test project'
+
+    # Delete the project
+    session.delete(project)
+    session.commit()
+
+    # Query the database to check if the project was deleted
+    project = session.query(Project).filter_by(description='Test project').first()
+
+    assert project is None

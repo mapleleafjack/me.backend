@@ -1,5 +1,6 @@
 from sqlalchemy import create_engine
 from sqlalchemy.exc import OperationalError
+from sqlalchemy.orm import sessionmaker
 import os
 import logging
 
@@ -18,6 +19,13 @@ def get_db_engine():
     """Function to create SQLAlchemy engine."""
     engine_url = f"postgresql://{postgresql_db_user}:{postgresql_db_password}@{postgresql_db_endpoint}:{postgresql_db_port}/{postgresql_db_name}"
     return create_engine(engine_url)
+
+# Create a session factory
+def get_session():
+    """Function to create a SQLAlchemy session."""
+    engine = get_db_engine()
+    Session = sessionmaker(bind=engine)
+    return Session()
 
 def check_db_connection():
     """Function to check the connection to the PostgreSQL database using SQLAlchemy."""
