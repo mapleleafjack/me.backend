@@ -9,7 +9,7 @@ import os
 from db.models import Base
 
 # Fixture for creating a SQLAlchemy engine connected to a test database
-@pytest.fixture(scope='session')
+@pytest.fixture(scope='function')
 def engine():
     # Use an environment variable or hardcoded connection string for the test database
     test_db_url = f"postgresql://{os.getenv('DB_USER')}:{os.getenv('DB_PASSWORD')}@{os.getenv('DB_HOST')}:{os.getenv('DB_PORT', 5432)}/{os.getenv('DB_NAME')}_test"
