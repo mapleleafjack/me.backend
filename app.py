@@ -17,7 +17,7 @@ app.register_blueprint(project_blueprint)
         
 @app.route('/')
 def home():
-    return "Hello, Jack! This is your backend service."
+    return "Hello, Jack! This is your backend service. Now automated!"
 
 @app.route('/me')
 def serve_me_json():
