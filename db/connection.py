@@ -35,7 +35,7 @@ def check_db_connection():
 
     try:
         with engine.connect() as connection:
-            result = connection.execute(text("SELECT 1"))
+            connection.execute(text("SELECT 1"))
             logging.info('Database connection successful')
             return True
     except OperationalError as e:
