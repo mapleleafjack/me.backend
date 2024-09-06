@@ -1,4 +1,4 @@
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, text
 from sqlalchemy.exc import OperationalError
 from sqlalchemy.orm import sessionmaker
 import os
@@ -34,9 +34,8 @@ def check_db_connection():
     engine = get_db_engine()
 
     try:
-        # Test the connection by executing a simple query
         with engine.connect() as connection:
-            result = connection.execute("SELECT 1")
+            result = connection.execute(text("SELECT 1"))
             logging.info('Database connection successful')
             return True
     except OperationalError as e:
