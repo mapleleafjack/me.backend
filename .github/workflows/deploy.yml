@@ -1,24 +1,16 @@
-name: CI and Deploy
+name: Deploy to AWS
 
 on:
-  push:
-    branches:
-      - main
+  workflow_run:
+    workflows: ["CI"]
+    types:
+      - completed
 
 jobs:
-  ci:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      # Add your existing CI steps here
-
   deploy:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
-    needs: ci
-    if: ${{ needs.ci.result == 'success' }}
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -29,6 +21,8 @@ jobs:
       - name: Log in to Amazon ECR
         id: login-ecr
         uses: aws-actions/amazon-ecr-login@v1
+        with:
+          region: eu-west-1  # Specify your AWS region here
 
       - name: Build and tag Docker image
         run: |
