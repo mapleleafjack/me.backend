@@ -15,6 +15,16 @@ class ProjectGateway:
         except Exception as e:
             print(f"An error occurred while retrieving the project: {e}")
             return None
+        
+    def get_all_projects(self):
+        """Retrieve all projects from the database."""
+        try:
+            # Query the database for all projects
+            projects = self.session.query(Project).all()
+            return projects
+        except Exception as e:
+            print(f"An error occurred while retrieving all projects: {e}")
+            return None
 
     def add_project(self, description):
         """Add a new project to the database."""

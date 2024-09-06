@@ -1,10 +1,8 @@
 import logging
-from flask import Flask, g, jsonify, request
+from flask import Flask
+from blueprint.project_blueprint import project_blueprint
 
-from blueprint import project_blueprint
-from db.connection import check_db_connection, get_session
-from usecase.project_usecase import add_project, get_projects
-from sqlalchemy.exc import SQLAlchemyError
+from db.connection import check_db_connection
 
 app = Flask(__name__)
 

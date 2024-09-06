@@ -33,13 +33,12 @@ def session(engine):
     # Begin a transaction
     transaction = connection.begin()
 
-    # Create a configured "Session" class
+    # Use sessionmaker to create a new session
     Session = sessionmaker(bind=connection)
     session = Session()
 
     yield session
 
-    # Rollback the transaction after each test
-    session.close()
+    # Rollback the transaction and close the connection
     transaction.rollback()
     connection.close()

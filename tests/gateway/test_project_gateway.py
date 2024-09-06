@@ -21,6 +21,16 @@ def test_get_project(project_gateway, mock_session):
     assert result == mock_project
     mock_session.query().filter().one_or_none.assert_called_once()
 
+def test_get_all_projects(project_gateway, mock_session):
+    """Test the get_all_projects method."""
+    mock_project = Project(id=1, description="Test Project")
+    mock_session.query().all.return_value = [mock_project]
+
+    result = project_gateway.get_all_projects()
+
+    assert result == [mock_project]
+    mock_session.query().all.assert_called_once()
+
 def test_add_project(project_gateway, mock_session):
     """Test the add_project method."""
 
