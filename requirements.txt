@@ -7,3 +7,4 @@ pytest
 coverage
 pytest-mock
 Flask-SQLAlchemy
+Flask-CORS

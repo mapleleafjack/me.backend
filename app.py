@@ -1,5 +1,6 @@
 import logging
 from flask import Flask
+from flask_cors import CORS
 from sqlalchemy import func
 from blueprint.project_blueprint import project_blueprint
 
@@ -7,6 +8,8 @@ from db.connection import check_db_connection, get_session
 from db.models import Project
 
 app = Flask(__name__)
+
+CORS(app, origins=['http://localhost:3000', 'https://d1f0umjeg6xxlk.cloudfront.net'])
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
