@@ -1,8 +1,10 @@
 import logging
 from flask import Flask
+from sqlalchemy import func
 from blueprint.project_blueprint import project_blueprint
 
-from db.connection import check_db_connection
+from db.connection import check_db_connection, get_session
+from db.models import Project
 
 app = Flask(__name__)
 
@@ -12,8 +14,12 @@ app.register_blueprint(project_blueprint)
         
 @app.route('/')
 def home():
-    return "Hello, Jack!"
-    
+    return "Hello, Jack! This is your backend service."
+
+@app.route('/me')
+def serve_me_json():
+    return app.send_static_file('me.json')
+
 @app.route('/health')
 def health():
     if check_db_connection():
