@@ -32,4 +32,4 @@ jobs:
         run: |
           echo "Changed Python files:"
           echo "${{ steps.get_changed_files.outputs.changed_files }}"
-          ruff ${{ steps.get_changed_files.outputs.changed_files }}
+          ruff check ${{ steps.get_changed_files.outputs.changed_files }}
