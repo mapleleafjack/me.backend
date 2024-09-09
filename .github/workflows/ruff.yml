@@ -1,0 +1,33 @@
+name: Run Ruff on Python File Changes
+
+on: [push]
+
+jobs:
+  ruff:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'  # Specify your Python version
+
+      - name: Install Ruff
+        run: |
+          python -m pip install --upgrade pip
+          pip install ruff
+
+      - name: Get changed Python files
+        id: get_changed_files
+        run: |
+          changed_files=$(git diff --name-only HEAD~1 HEAD | grep '\.py$' || true)
+          echo "changed_files=$changed_files" >> $GITHUB_OUTPUT
+
+      - name: Run Ruff on changed Python files
+        if: steps.get_changed_files.outputs.changed_files != ''
+        run: |
+          echo "Changed Python files:"
+          echo "${{ steps.get_changed_files.outputs.changed_files }}"
+          ruff ${{ steps.get_changed_files.outputs.changed_files }}
