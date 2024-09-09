@@ -14,7 +14,7 @@ def create_project():
     if project is not None:
         return jsonify(project.serialize()), 201
     else:
-        return jsonify({"error": "Failed to create projectfs"} ), 500
+        return jsonify({"error": "Failed to create projectfs"}   ), 500
     
 @project_blueprint.route('/projects/<int:project_id>', methods=['GET'])
 def get_project(project_id):

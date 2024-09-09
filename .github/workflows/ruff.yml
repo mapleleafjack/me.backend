@@ -8,11 +8,13 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 2  # Fetch at least 2 commits to ensure HEAD~1 is available
 
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.x'  # Specify your Python version
+          python-version: '3.10.12'  # Specify your Python version
 
       - name: Install Ruff
         run: |
@@ -22,7 +24,7 @@ jobs:
       - name: Get changed Python files
         id: get_changed_files
         run: |
-          changed_files=$(git diff --name-only HEAD~1 HEAD | grep '\.py$' || true)
+          changed_files=$(git diff --name-only HEAD~1 HEAD -- '*.py' || true)
           echo "changed_files=$changed_files" >> $GITHUB_OUTPUT
 
       - name: Run Ruff on changed Python files
