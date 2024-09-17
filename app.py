@@ -23,6 +23,10 @@ def home():
 def serve_me_json():
     return app.send_static_file('me.json')
 
+@app.route('/me/cover-letter')
+def serve_cover_letter():
+    return app.send_static_file('cover.json')
+
 @app.route('/health')
 def health():
     if check_db_connection():

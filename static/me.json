@@ -1,143 +1,142 @@
 {
-    "personal_info": {
-      "name": "Jack Musajo (Chakri)",
-      "contact": {
-        "email": "jack.musajo@gmail.com",
-        "github": "mapleleafjack"
-      },
-      "languages": ["English", "Italian"]
+  "personal_info": {
+    "name": "Jack Musajo (Chakri)",
+    "contact": {
+      "email": "jack.musajo@gmail.com",
+      "github": "mapleleafjack"
     },
-    "personality": {
-      "description": [
-        "Jack is a seasoned software engineer with over 10 years of experience across a diverse range of technologies. He has a pragmatic and adaptable approach to technology, favoring simplicity and efficiency in his solutions.",
-        "He values clear communication, reflected in his preference for being called 'Jack' to simplify interactions. His experience spans from embedded systems to modern web technologies, yet he is particularly drawn to Python/Flask and JavaScript for their simplicity and elegance.",
-        "Jack is likely to be thoughtful, detail-oriented, and approachable, with a strong focus on practical solutions that meet real-world needs.",
-        "He is enthusiastic about integrating AI into his workflow, always looking to leverage the best technologies available while maintaining a strong commitment to respecting privacy.",
-        "Jack’s diverse experiences and skill set allow him to seamlessly navigate both frontend and backend development, bringing a balanced and comprehensive approach to his work.",
-        "In his free time, Jack is an accomplished fire juggler, specializing in poi, double staffs, and contact ball. This hobby reflects his creativity and ability to handle multiple tasks simultaneously, a trait that complements his professional work."
-      ],
-      "traits": ["pragmatic", "adaptable", "detail-oriented", "approachable", "practical", "technology-savvy", "privacy-conscious"]
-    },
-    "work_experience": [
-      {
-        "role": "Backend Engineer",
-        "company": "Sano Genetics",
-        "location": "London, UK",
-        "years": "2023 - Ongoing",
-        "keywords": ["Python", "SQLAlchemy", "bioengineering", "code refactoring", "Docker", "AWS", "Terraform", "GitHub Actions", "Miro", "CI/CD", "Sequera Platform", "NFCore", "API development", "logistics", "Amazon ECR"],
-        "details": [
-          "Refactored and cleaned up bioengineering tools by analyzing their workflows with Miro and restructuring their GitHub repository. Implemented a CI pipeline with code quality checks and environment setup guidelines.",
-          "Revamped an obsolete codebase responsible for synchronizing data between an internal application and a third-party application through tunneling and VPNs, using modern asynchronous techniques and idempotent scripts.",
-          "Expanded the main application's API endpoints to facilitate the sending and retrieval of bio data to and from the main frontend.",
-          "Developed parts of the logistics system that handles the dispatch of testing kits to study participants, ensuring smooth and efficient operations.",
-          "Used GitHub Actions to automate Docker builds, publishing them to Amazon ECR. These images were then integrated into the Sequera Tower bioengineer platform, making them automatically available for use."
-        ]
-      },
-      {
-        "role": "Senior Full Stack Engineer",
-        "company": "Made Tech",
-        "location": "London, UK",
-        "years": "2021 - 2023",
-        "keywords": ["React", "C#", "Python", "Flask", "SQLAlchemy", "Agile", "team leadership", "GovUK", "Hackney Social Care", "Housing Repairs", "stakeholder communication", "Agile ceremonies"],
-        "details": [
-          "Led development on the Hackney Social Care platform, rewriting critical parts during the pandemic to support a fully digital service. Some features are still in use today.",
-          "Balanced hands-on coding and team management by employing time management and Agile techniques, effectively dividing tasks between senior and junior engineers.",
-          "Learned and applied best practices in Agile methodologies, including stakeholder communication, translating product ideas into development requirements, and leading Agile ceremonies."
-        ]
-      },
-      {
-        "role": "Frontend Engineer",
-        "company": "Engage Hub",
-        "location": "London, UK",
-        "years": "2017 - 2021",
-        "keywords": ["Java", "JavaScript", "UI/UX", "email designer", "account permissions", "white-labeling"],
-        "details": "Developed features for an AI automation company, focusing on UI/UX and platform customization, including a drag-and-drop email designer and an account permissions system."
-      },
-      {
-        "role": "Software Engineer",
-        "company": "Sixs",
-        "location": "Crema, IT",
-        "years": "2014 - 2017",
-        "keywords": ["Java", "Vaadin", "APIs", "NFC", "database migration", "customer support", "Social Service platform"],
-        "details": "Built and maintained a Social Service platform, enabling social workers to connect with those in need. Managed software instances, expanded functionalities, and ensured data integrity through effective database management."
-      }
+    "languages": ["English", "Italian"]
+  },
+  "personality": {
+    "description": [
+      "Jack is a seasoned software engineer with over 10 years of experience across a diverse range of technologies. He has a pragmatic and adaptable approach to technology, favoring simplicity and efficiency in his solutions.",
+      "He values clear communication, reflected in his preference for being called 'Jack' to simplify interactions. His experience spans from embedded systems to modern web technologies, yet he is particularly drawn to Python/Flask and JavaScript for their simplicity and elegance.",
+      "Jack is thoughtful, detail-oriented, and approachable, with a strong focus on practical solutions that meet real-world needs.",
+      "He is enthusiastic about integrating AI and machine learning tools, such as OpenAI APIs, into his workflow, always leveraging the best technologies available while maintaining a strong commitment to respecting privacy.",
+      "Jack’s diverse experience allows him to navigate both frontend and backend development seamlessly, bringing a balanced and comprehensive approach to his work.",
+      "In his free time, Jack is an accomplished fire juggler, specializing in poi, double staffs, and contact ball, reflecting his creativity and multitasking ability."
     ],
-    "skills": [
-      "Python", "JavaScript", "Java", "TypeScript", "SQL", 
-      "Flask", "React", "SQLAlchemy", "TDD", "CI/CD", 
-      "Agile", "team leadership", "Docker", "AWS", "Terraform", "C#", "Arduino", "C++", "Amazon ECR"
-    ],
-    "education": [
-      "Programming diploma - ITCG L.Pacioli, Crema, Italy (2012)",
-      "Certificate in Audio Engineering - Nuova Audio Multimedia, Milan, Italy (2013)"
-    ],
-    "interests": [
-      "Audio engineering", "Music (piano, guitar, bass, clarinet)", "Juggling (poi, double staffs, contact ball)"
-    ],
-    "personal_development": {
-      "current_learning": ["Terraform", "Clean code and architecture", "Bioengineering"],
-      "future_goals": ["Health sector", "Mental health", "Impact-driven industries"]
-    },
-    "work_preferences": {
-      "environment": "Remote work",
-      "collaboration": [
-        "Cross-functional collaboration with designers, product managers, and bioengineers to understand requirements and translate them into solutions.",
-        "Involved in significant cross-team collaboration, particularly in bioengineering code refactoring.",
-        "Comfortable with the dynamic nature of startup environments and adapting to diverse tasks, from adjusting CSS positioning to debugging complex database queries."
+    "traits": ["pragmatic", "adaptable", "detail-oriented", "approachable", "practical", "technology-savvy", "privacy-conscious", "innovative"]
+  },
+  "work_experience": [
+    {
+      "role": "Backend Engineer",
+      "company": "Sano Genetics",
+      "location": "London, UK",
+      "years": "2023 - Ongoing",
+      "keywords": ["Python", "SQLAlchemy", "bioengineering", "code refactoring", "Docker", "AWS", "Terraform", "GitHub Actions", "Miro", "CI/CD", "Sequera Platform", "NFCore", "API development", "logistics", "Amazon ECR", "OpenAI APIs"],
+      "details": [
+        "Refactored and cleaned up bioengineering tools by analyzing their workflows with Miro and restructuring their GitHub repository. Implemented a CI pipeline with code quality checks and environment setup guidelines.",
+        "Revamped an obsolete codebase responsible for synchronizing data between an internal application and a third-party application through tunneling and VPNs, using modern asynchronous techniques and idempotent scripts.",
+        "Expanded the main application's API endpoints to facilitate the sending and retrieval of bio data to and from the main frontend.",
+        "Developed parts of the logistics system that handles the dispatch of testing kits to study participants, ensuring smooth and efficient operations.",
+        "Automated Docker builds with GitHub Actions, publishing them to Amazon ECR, integrating with Sequera Tower and deploying internal tools using OpenAI APIs."
       ]
     },
-    "mentorship": {
-      "experience": "Mentored junior developers both professionally and personally, helping them grow into full-fledged software engineers."
-    },
-    "style": {
-      "personal_and_conversational": [
-        "You use a first-person, direct approach that reflects your personal voice.",
-        "Your language is informal and approachable, making you seem relatable and enthusiastic.",
-        "You often include personal anecdotes or experiences to connect with the reader (e.g., being a user of Spill’s services)."
-      ],
-      "enthusiastic_and_genuine": [
-        "You express excitement and passion about the company and the role.",
-        "Your enthusiasm is conveyed through positive language and exclamation points."
-      ],
-      "confident_yet_humble": [
-        "You highlight your skills and experience confidently but avoid arrogance.",
-        "You use humor and modesty to describe your expertise (e.g., joking about 'fine-tuning graphical elements' and 'crafting complex database queries')."
-      ],
-      "professional_with_a_personal_touch": [
-        "You maintain professionalism while adding personal elements, such as mentioning your connection to the octopus or your experience with Spill’s services."
+    {
+      "role": "Senior Full Stack Engineer",
+      "company": "Made Tech",
+      "location": "London, UK",
+      "years": "2021 - 2023",
+      "keywords": ["React", "C#", "Python", "Flask", "SQLAlchemy", "Agile", "team leadership", "GovUK", "Hackney Social Care", "Housing Repairs", "stakeholder communication", "Agile ceremonies"],
+      "details": [
+        "Led development on the Hackney Social Care platform, rewriting critical parts during the pandemic to support a fully digital service. Some features are still in use today.",
+        "Balanced hands-on coding and team management by employing time management and Agile techniques, effectively dividing tasks between senior and junior engineers.",
+        "Applied best practices in Agile methodologies, including stakeholder communication, translating product ideas into development requirements, and leading Agile ceremonies."
       ]
     },
-    "tone": {
-      "casual_and_approachable": [
-        "The tone is friendly and informal, aiming to build rapport with the reader.",
-        "It reflects a conversational style rather than a strictly formal or corporate one."
-      ],
-      "excited_and_positive": [
-        "The tone conveys genuine excitement about the role and the company.",
-        "You use upbeat language to express how much you enjoy the work and the company’s mission."
-      ],
-      "self_assured": [
-        "You confidently describe your skills and experience without being overly boastful.",
-        "Your descriptions of your abilities are clear and assertive, highlighting your readiness for the role."
-      ]
+    {
+      "role": "Frontend Engineer",
+      "company": "Engage Hub",
+      "location": "London, UK",
+      "years": "2017 - 2021",
+      "keywords": ["Java", "JavaScript", "UI/UX", "email designer", "account permissions", "white-labeling"],
+      "details": "Developed features for an AI automation company, focusing on UI/UX and platform customization, including a drag-and-drop email designer and an account permissions system."
     },
-    "subtext": {
-      "alignment_with_company_values": [
-        "You align your skills and experiences with the company’s goals and values, showing that you are a good fit for their mission.",
-        "Your mention of using the company’s services and how they’ve positively impacted you reflects a personal connection to their work."
-      ],
-      "readiness_for_challenges": [
-        "By expressing excitement about a dynamic work environment and flexibility, you signal that you are comfortable with change and ready to tackle diverse tasks."
-      ],
-      "commitment_to_quality": [
-        "Your emphasis on writing clean, maintainable, and future-proof code indicates a commitment to high standards and long-term value in your work."
-      ],
-      "cultural_fit": [
-        "The fun side notes (like the octopus being your spirit animal) suggest that you value a company culture that appreciates individuality and a bit of personality."
-      ],
-      "user_centric_mindset": [
-        "By mentioning your focus on solving real problems for users and your passion for mental health support, you show that you are aligned with the company's product engineering mindset."
-      ]
+    {
+      "role": "Software Engineer",
+      "company": "Sixs",
+      "location": "Crema, IT",
+      "years": "2014 - 2017",
+      "keywords": ["Java", "Vaadin", "APIs", "NFC", "database migration", "customer support", "Social Service platform"],
+      "details": "Built and maintained a Social Service platform, enabling social workers to connect with those in need. Managed software instances, expanded functionalities, and ensured data integrity through effective database management."
     }
+  ],
+  "skills": [
+    "Python", "JavaScript", "Java", "TypeScript", "SQL", 
+    "Flask", "React", "SQLAlchemy", "TDD", "CI/CD", 
+    "Agile", "team leadership", "Docker", "AWS", "Terraform", "C#", "Arduino", "C++", "Amazon ECR", "OpenAI APIs"
+  ],
+  "education": [
+    "Programming diploma - ITCG L.Pacioli, Crema, Italy (2012)",
+    "Certificate in Audio Engineering - Nuova Audio Multimedia, Milan, Italy (2013)"
+  ],
+  "interests": [
+    "Audio engineering", "Music (piano, guitar, bass, clarinet)", "Juggling (poi, double staffs, contact ball)"
+  ],
+  "personal_development": {
+    "current_learning": ["Terraform", "Clean code and architecture", "Bioengineering", "AI and ML tools"],
+    "future_goals": ["Health sector", "Mental health", "Impact-driven industries", "AI-driven innovation"]
+  },
+  "work_preferences": {
+    "environment": "Remote work",
+    "collaboration": [
+      "Cross-functional collaboration with designers, product managers, bioengineers, and data scientists to understand requirements and translate them into solutions.",
+      "Involved in significant cross-team collaboration, particularly in bioengineering code refactoring and automation.",
+      "Comfortable with the dynamic nature of startup environments and adapting to diverse tasks, from adjusting CSS positioning to debugging complex database queries."
+    ]
+  },
+  "mentorship": {
+    "experience": "Mentored junior developers both professionally and personally, helping them grow into full-fledged software engineers."
+  },
+  "style": {
+    "personal_and_conversational": [
+      "You use a first-person, direct approach that reflects your personal voice.",
+      "Your language is informal and approachable, making you seem relatable and enthusiastic.",
+      "You often include personal anecdotes or experiences to connect with the reader."
+    ],
+    "enthusiastic_and_genuine": [
+      "You express excitement and passion about the company and the role.",
+      "Your enthusiasm is conveyed through positive language and exclamation points."
+    ],
+    "confident_yet_humble": [
+      "You highlight your skills and experience confidently but avoid arrogance.",
+      "You use humor and modesty to describe your expertise (e.g., joking about 'fine-tuning graphical elements' and 'crafting complex database queries')."
+    ],
+    "professional_with_a_personal_touch": [
+      "You maintain professionalism while adding personal elements, such as mentioning your connection to creative hobbies or experiences in various sectors."
+    ]
+  },
+  "tone": {
+    "casual_and_approachable": [
+      "The tone is friendly and informal, aiming to build rapport with the reader.",
+      "It reflects a conversational style rather than a strictly formal or corporate one."
+    ],
+    "excited_and_positive": [
+      "The tone conveys genuine excitement about the role and the company.",
+      "You use upbeat language to express how much you enjoy the work and the company’s mission."
+    ],
+    "self_assured": [
+      "You confidently describe your skills and experience without being overly boastful.",
+      "Your descriptions of your abilities are clear and assertive, highlighting your readiness for the role."
+    ]
+  },
+  "subtext": {
+    "alignment_with_company_values": [
+      "You align your skills and experiences with the company’s goals and values, showing that you are a good fit for their mission.",
+      "You demonstrate a genuine interest in the company's mission, whether in health, AI, or biotechnology."
+    ],
+    "readiness_for_challenges": [
+      "By expressing excitement about a dynamic work environment and flexibility, you signal that you are comfortable with change and ready to tackle diverse tasks."
+    ],
+    "commitment_to_quality": [
+      "Your emphasis on writing clean, maintainable, and future-proof code indicates a commitment to high standards and long-term value in your work."
+    ],
+    "cultural_fit": [
+      "You appreciate a company culture that values individuality, creativity, and a bit of personality."
+    ],
+    "user_centric_mindset": [
+      "By focusing on solving real problems for users and your passion for impactful technological solutions, you show alignment with the company's product engineering mindset."
+    ]
   }
-  
+}
