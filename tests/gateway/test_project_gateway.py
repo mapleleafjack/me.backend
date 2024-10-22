@@ -34,25 +34,32 @@ def test_get_all_projects(project_gateway, mock_session):
 def test_add_project(project_gateway, mock_session):
     """Test the add_project method."""
 
-    mock_project = Project(description="New Project")
+    mock_project = Project(title="Test Title", description="New Project")
     mock_session.add.return_value = None 
     mock_session.commit.return_value = None 
 
-    result = project_gateway.add_project("New Project")
+    # Update the call to include 'title' and 'body'
+    result = project_gateway.add_project(title="Test Title", description="New Project", body={'key': 'value'})
 
+    assert result.title == mock_project.title
     assert result.description == mock_project.description
     mock_session.add.assert_called_once()
     mock_session.commit.assert_called_once()
 
+
 def test_update_project(project_gateway, mock_session):
     """Test the update_project method."""
-    mock_project = Project(id=1, description="Old Description")
+    mock_project = Project(id=1, title="Old Title", description="Old Description", body={'old': 'data'})
     mock_session.query().filter().one_or_none.return_value = mock_project
 
-    result = project_gateway.update_project(1, "Updated Description")
+    # Update the call to include new parameters
+    result = project_gateway.update_project(1, new_title="Updated Title", new_description="Updated Description", new_body={'new': 'data'})
 
+    assert result.title == "Updated Title"
     assert result.description == "Updated Description"
+    assert result.body == {'new': 'data'}
     mock_session.commit.assert_called_once()
+
 
 def test_delete_project(project_gateway, mock_session):
     """Test the delete_project method."""

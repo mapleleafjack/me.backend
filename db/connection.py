@@ -3,6 +3,9 @@ from sqlalchemy.exc import OperationalError
 from sqlalchemy.orm import sessionmaker
 import os
 import logging
+from dotenv import load_dotenv  # Add this import
+
+load_dotenv()  # Add this line
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')

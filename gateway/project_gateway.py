@@ -26,11 +26,10 @@ class ProjectGateway:
             print(f"An error occurred while retrieving all projects: {e}")
             return None
 
-    def add_project(self, description):
+    def add_project(self, title, description, body=None):
         """Add a new project to the database."""
         try:
-            # Create a new project instance
-            new_project = Project(description=description)
+            new_project = Project(title=title, description=description, body=body)
             self.session.add(new_project)
             self.session.commit()
             return new_project
@@ -39,12 +38,17 @@ class ProjectGateway:
             self.session.rollback()
             return None
         
-    def update_project(self, project_id, new_description):
-        """Update the description of an existing project."""
+    def update_project(self, project_id, new_title=None, new_description=None, new_body=None):
+        """Update fields of an existing project."""
         try:
             project = self.session.query(Project).filter(Project.id == project_id).one_or_none()
             if project is not None:
-                project.description = new_description
+                if new_title is not None:
+                    project.title = new_title
+                if new_description is not None:
+                    project.description = new_description
+                if new_body is not None:
+                    project.body = new_body
                 self.session.commit()
                 return project
             else:
@@ -54,7 +58,7 @@ class ProjectGateway:
             print(f"An error occurred while updating the project: {e}")
             self.session.rollback()
             return None
-        
+
     def delete_project(self, project_id):
         """Delete a project by its ID."""
         try:

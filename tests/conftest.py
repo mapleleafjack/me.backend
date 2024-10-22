@@ -1,12 +1,17 @@
-# conftest.py
-
+import sys
+import os
+from dotenv import load_dotenv
 import pytest
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-
-import os
-
 from db.models import Base
+
+# Adjust sys.path to include the project root directory
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+# Load environment variables from the .env file in the project root
+dotenv_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '.env'))
+load_dotenv(dotenv_path=dotenv_path)
 
 # Fixture for creating a SQLAlchemy engine connected to a test database
 @pytest.fixture(scope='function')

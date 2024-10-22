@@ -9,12 +9,16 @@ project_blueprint = Blueprint('project_blueprint', __name__)
 @project_blueprint.route('/projects', methods=['POST'])
 def create_project():
     usecase = ProjectUseCase(ProjectGateway(get_session()))
-    description = request.json.get('description')
-    project = usecase.add_project(description)
+    data = request.json
+    title = data.get('title')
+    description = data.get('description')
+    body = data.get('body')
+    project = usecase.add_project(title, description, body)
     if project is not None:
         return jsonify(project.serialize()), 201
     else:
-        return jsonify({"error": "Failed to create project"}    ), 500
+        return jsonify({"error": "Failed to create project"}), 500
+
     
 @project_blueprint.route('/projects/<int:project_id>', methods=['GET'])
 def get_project(project_id):
@@ -37,8 +41,11 @@ def get_all_projects():
 @project_blueprint.route('/projects/<int:project_id>', methods=['PUT'])
 def update_project(project_id):
     usecase = ProjectUseCase(ProjectGateway(get_session()))
-    description = request.json.get('description')
-    project = usecase.update_project(project_id, description)
+    data = request.json
+    new_title = data.get('title')
+    new_description = data.get('description')
+    new_body = data.get('body')
+    project = usecase.update_project(project_id, new_title, new_description, new_body)
     if project is not None:
         return jsonify(project.serialize()), 200
     else:

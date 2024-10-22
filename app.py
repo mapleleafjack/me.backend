@@ -1,11 +1,9 @@
 import logging
 from flask import Flask
 from flask_cors import CORS
-from sqlalchemy import func
 from blueprint.project_blueprint import project_blueprint
 
-from db.connection import check_db_connection, get_session
-from db.models import Project
+from db.connection import check_db_connection
 
 app = Flask(__name__)
 
